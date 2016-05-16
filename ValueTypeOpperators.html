@@ -3,8 +3,11 @@
 	<title></title>
 	<script type="text/javascript">
 	function sum(no) {
-		for(var i = 1; i <= no; i++)
-			console.log(i);
+		var sum = 0;
+		for(var i = 1; i <= no; i++){
+			sum += i;
+			console.log(i + ' sum = ' + sum);
+		}
 		return 1;
 	}
 	</script>
