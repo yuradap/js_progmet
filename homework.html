@@ -12,11 +12,21 @@
 				console.log('false');
 			}
 			
+	}
+
+	function buffetPrice(customerNo) {
+		var r = customerNo % 3;
+		var p = 500;
+		return (customerNo - (customerNo - r) / 3) * p;
+	}
+
+	function checkBuffetPromotion(customerNo,price) {
+		if (buffetPrice(customerNo) == price) {
+			console.log('Correct billing.');
+		} else {
+			console.log('Wrong billing.');
 		}
-
-
-
-
+	}
 	</script>
 </head>
 <body>

@@ -1,0 +1,132 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+
+		
+		/**
+		* demonstrate basic if usage.
+		*
+		*/
+		function basicControl(monthDay){
+			var mensDay = 10;
+			if (monthDay <= mensDay) {
+				// true what to do..
+				console.log('เป็นเมนส์');
+			} else {
+				// false what to do...
+				console.log('หายเป็นเมนส์');
+			}
+		}
+
+		function pressureMeaning(sbp) {
+			// 70 - 90 = low
+			// 91 - 120 = ideal
+			// 121 ++   = high
+
+			if (sbp <= 90) {
+				console.log('low blood pressure.');
+			} else if (sbp <= 120) {
+				console.log('ideal blood pressure.');
+			} else {
+				console.log('high blood pressure.');
+			}
+		}
+
+		function pressureMeaning2(sbp) {
+			if (sbp >= 121) {
+				console.log('high blood pressure');
+			}else if (sbp >= 91) {
+				console.log('ideal blood pressure');
+			}else {
+				console.log('low blood pressure');
+			}
+		}
+
+		// 91 - 100 = A
+		// 81 - 90 = B
+		// 71 - 80 = C
+		// 61 - 70 = D
+		// 0 - 60 = F
+
+		function grading(score)	{
+			if (score >= 91) {
+				console.log('A');
+			}else if (score >= 81) {
+				console.log('B');
+			}else if (score >= 71) {
+				console.log('C');
+			}else if (score >= 61) {
+				console.log('D');
+			}else {
+				console.log('F');
+			}
+		}
+
+		function grading2(score) {
+			// if (score < 0) {
+			// 	console.log('wrong number');
+			// } else if (score <= 60)	{
+			// 	console.log('F');
+			// }else if (score <= 70) {
+			// 	console.log('D');
+			// }else if (score <= 80) {
+			// 	console.log('C');
+			// }else if (score <= 90)	{
+			// 	console.log('B');
+			// }else if (score <= 100){
+			// 	console.log('A');
+			// }else {
+			// 	console.log('wrong number');	
+			// }
+
+			if (score < 0 || score > 100) {
+				console.log('wrong score');
+			} else if (score > 90) {
+				console.log('score ' + score + ' = A.');
+			} else if (score > 80) {
+				console.log('score ' + score + ' = B.');
+			} else if (score > 70) {
+				console.log('score ' + score + ' = C.');
+			} else if (score > 60) {
+				console.log('score ' + score + ' = D.');
+			} else {
+				console.log('score ' + score + ' = F.');
+			}
+		}
+
+		function basicSwitch(n) {
+			switch (n) {
+				case 1:
+					console.log('Monday.');
+					// break;
+				case 2:
+					console.log('Tuesday');
+					// break;
+				case 3:
+					console.log('Wednesday');
+					// break;
+				case 4:
+					console.log('Thursday');
+					// break;
+				case 5:
+					console.log('Friday');
+					// break;
+				case 6:
+					console.log('Saturday');
+					// break;
+				case 7:
+					console.log('Sunday');
+					// break;
+				default:
+					console.log('wrong number.');
+			}
+		}
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

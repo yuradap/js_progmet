@@ -16,7 +16,7 @@
 		}
 
 		function powerOfTwo(x) {
-			return x*x;
+			return x * x;
 		}
 
 		function greeting(name) {
@@ -69,16 +69,16 @@
 				console.log('x = y');
 			}else if (x > y) {
 				console.log('x > y');
-			}else if (x < y) {
+			}else {//if (x < y) { //ไม่จำเป็นต้อง if เพราะเหลือกรณีเดียว
 				console.log('x < y');
 			}
 		}
 
 		function identiflyNumber(x) {
 			var r = x % 2;
-			if ( r == 0 ) {
+			if ( r == 0 ) { // หรือจะไม่ต้องใช้ var r => if ( (x % 2) == 0 )
 				console.log( 'even number' );
-			}else if ( r == 1 ) {
+			}else {// if ( r == 1 ) { //ไม่จำเป็นต้อง if เพราะเหลือกรณีเดียว
 				console.log( 'odd number' );
 			}
 		}
