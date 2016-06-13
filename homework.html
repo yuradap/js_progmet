@@ -136,6 +136,39 @@
 				case 'January':
 					console.log('31 days');
 					break;
+				case 'February':
+					console.log('28 0r 29 days');
+					break;
+				case 'March':
+					console.log('31 days');
+					break;
+				case 'April':
+					console.log('30 days');
+					break;
+				case 'May':
+					console.log('31 days');
+					break;
+				case 'June':
+					console.log('30 days');
+					break;
+				case 'July':
+					console.log('31 days');
+					break;
+				case 'August':
+					console.log('31 days');
+					break;
+				case 'September':
+					console.log('30 days');
+					break;
+				case 'October':
+					console.log('31 days');
+					break;
+				case 'November':
+					console.log('30 days');
+					break;
+				case 'December':
+					console.log('31 days');
+					break;
 				default:
 					console.log('none');
 			}
@@ -191,6 +224,57 @@
 				console.log('wrong number');
 			}
 		}
+
+		function mainDishPrice(dishChoice) {
+			switch (dishChoice) {
+				case 1:
+					return 25;
+				case 2:
+					return 30;
+				case 3:
+					return 35;
+				default:
+					return 0;
+			}
+		}
+		function desertPrice(desertChoice) {
+			switch (desertChoice) {
+				case 1:
+					return 30;
+				case 2:
+					return 10;
+				case 3:
+					return 15;
+				default:
+					return 0;
+			}
+		}
+
+		function drinkPrice(drinkChoice) {
+			switch (drinkChoice) {
+				case 1:
+					return 10;
+				case 2:
+					return 14;
+				case 3:
+				 	return 15;
+				 default:
+				 	return 0;
+			}
+		}
+
+		function billingPrice(dishChoice , desertChoice , drinkChoice) {
+			if (dishChoice == 1 && desertChoice == 1 && drinkChoice == 3) {
+				return 65;
+			}else if (dishChoice == 3 && desertChoice == 2 && drinkChoice == 1) {
+				return 50;
+			}else if (dishChoice == 2 && desertChoice == 3 && drinkChoice == 2) {
+				return 55;
+			}else 
+				return mainDishPrice(dishChoice) + desertPrice(desertChoice) + drinkPrice(drinkChoice);	
+		}
+
+
 
 	</script>
 </head>
