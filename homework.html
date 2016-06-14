@@ -312,14 +312,24 @@
 		}
 
 		function sortArray(no) {
-			var no = [30, 40, 10, 100, 0, 70, 80];
+			// var no = [30, 40, 10, 100, 0, 70, 80];
 				return no.sort(function(a, b) {return b-a});
 		}
 
 		function calArrey(cal) {
-			var cal = [10, '+', 20];
-			if (cal[1] == '+');
-				console.log(cal[0] + cal[1] + cal[2] + '=' + cal[0 + 2]);
+			console.log(cal[1]);
+			if (cal[1] == '+')
+				console.log(cal[0] +'+'+ cal[2] + '=' + (cal[0] + cal[2]));
+			else if (cal[1] == '-')
+				console.log(cal[0] +'-'+ cal[2] + '=' + (cal[0] - cal[2]));
+			else if (cal[1] == '*')
+				console.log(cal[0] +'*'+ cal[2] + '=' + (cal[0] * cal[2]));
+			else if (cal[1] == '/')
+				console.log(cal[0] +'/'+ cal[2] + '=' + (cal[0] / cal[2]));
+			else {
+				console.log('wrong');
+			}
+
 		}
 
 
