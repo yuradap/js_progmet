@@ -1,0 +1,37 @@
+<html>
+<head>
+	<title>Loop</title>
+	<script type="text/javascript">
+		function basicFor() {
+			var no = [12,34,54,36,23,56,34,87,54,34,76,4,5];
+
+			for (var i = 0; i <= no.length; i++) {
+				console.log('Member#' + (i + 1) + ' = ' + no[i]);
+			}
+
+		}
+
+		function sumInteger(n) {
+			var sum = 0;
+			for (var i = 1; i <= n; i++) {
+				console.log('sum = ' + sum + ' + ' + i);
+				sum = sum + i;
+			}
+			return sum;
+		}
+
+		function fac(n) {
+			var fac = 1;
+			for (var i = 1; i <= n; i++) {
+				fac = fac * i;
+				// console.log(i);
+			}
+			return fac;
+		}
+		
+	</script>
+</head>
+<body>
+	<h1>Loop</h1>
+</body>
+</html>
