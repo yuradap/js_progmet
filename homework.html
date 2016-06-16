@@ -329,7 +329,26 @@
 			else {
 				console.log('wrong');
 			}
+		}
+		
 
+		function starTriangle(n) {
+			var showTxt = '';
+			for (var i = 1; i <= n; i++) {
+				showTxt = showTxt + '*';
+				console.log(showTxt);
+			}
+		}
+
+		function fishTriangle(n) {
+			var showTxt = '';
+			for (var i = 1; i <= n; i++) {
+				if (i % 2 == 0)
+					showTxt = showTxt + '>';
+				else 
+					showTxt = showTxt + '<';
+				console.log(showTxt);n
+			}
 		}
 
 
