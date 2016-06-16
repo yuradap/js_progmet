@@ -23,10 +23,13 @@
 
 		function fac(n) {
 			var fac = 1;
+			var showTxt = n + '! = ';
 			for (var i = 1; i <= n; i++) {
 				fac = fac * i;
-				// console.log(i);
+				showTxt = showTxt + i + 'x';
+				
 			}
+			console.log(showTxt.substring(0, showTxt.length - 1));
 			return fac;
 		}
 
@@ -55,10 +58,46 @@
 				showTxt = showTxt + i + '+';
 				console.log(showTxt);
 			}
-			// var newShowTxt = showTxt.substring(0, (showTxt.length - 1));
-			// console.log(newShowTxt + ' = ' + sum);
-			
-			// return sum;
+		}
+
+		function facAlt(n) {
+			var fac = 1;
+			var showTxt = n + '! = ';
+			for (var i = n; i >= 1; i--) {
+				fac = fac * i;
+				showTxt = showTxt + i + 'x';
+				console.log(i);
+			}
+			console.log(showTxt.substring(0, showTxt.length - 1));
+			return fac;
+		}
+
+		function starTriangleAlt(n) {
+			var showTxt;
+			for (var i = n; i >= i; i--) {
+				showTxt =  '';
+				for (var j = 1 ; j <= i; j++) {
+					showTxt = showTxt + '*';
+				}
+				console.log(showTxt);
+			}
+		}
+
+		function diag() {
+			var organ = ['lung','liver','kidney'];
+			var viral = ['ecoli','abom','kimbom'];
+			var result = ['positive','negative','weak positive'];
+
+			var diagTxt;
+			for (var i = 0; i < organ.length ; i++) {
+				for (var j = 0; j < viral.length; j++) {
+					for (var k = 0 ; k < result.length ; k++) {
+						diagTxt = organ[i] + ' ' + viral[j] + ' ' + result[k];
+						console.log(diagTxt);
+					}
+				}
+			}
+			return true;
 		}
 		
 	</script>
