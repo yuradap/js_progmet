@@ -1,6 +1,7 @@
 <html>
 <head>
-	<title></title>
+	<meta charset="utf-8">
+	<title>homework</title>
 	<script type="text/javascript">
 	function calBuffet(customerNo,price) {
 		var r = customerNo % 3;
@@ -340,6 +341,17 @@
 			}
 		}
 
+		function starTriangleAlt(n) {
+			var showTxt;
+			for (var i = n; i >= i; i--) {
+				showTxt =  '';
+				for (var j = 1 ; j <= i; j++) {
+					showTxt = showTxt + '*';
+				}
+				console.log(showTxt);
+			}
+		}
+
 		function fishTriangle(n) {
 			var showTxt = '';
 			for (var i = 1; i <= n; i++) {
@@ -347,10 +359,52 @@
 					showTxt = showTxt + '>';
 				else 
 					showTxt = showTxt + '<';
-				console.log(showTxt);n
+				console.log(showTxt);
 			}
 		}
 
+		function fishTriangleAlt(n) {
+			var showTxt;
+			for (var i = n; i >= 1; i--) {
+				showTxt = '';
+				for (var j = 1; j <= i; j++) {
+					if (j % 2 == 0)
+						showTxt = showTxt + '<';
+					else 
+						showTxt = showTxt + '>';
+				}
+				console.log(showTxt);
+			}
+		}
+
+		function comboSet() {
+			var food = ['ก๋วยเตี๋ยวสวรรคโลก', 'ก๋วยเตี๋ยวไก่ตุ๋น', 'อาหารตามสั่ง'];
+			var dessert = ['มันหวานญี่ปุ่นเผา', 'แป้งข้าวหมาก', 'บัวลอย'];
+			var drink = ['น้ำชง', 'โค้กกลาง', 'เป๊บซี่เล็ก'];
+
+			var combo;
+			var count = 0;
+			for (var i = 0; i < food.length ; i++) {
+				for (var j = 0; j < dessert.length; j++) {
+					for (var k = 0 ; k < drink.length ; k++) {
+						count = count + 1;
+						combo = count + '.' + food[i] + ' ' + dessert[j] + ' ' + drink[k];
+						console.log(combo);
+					}
+				}
+			}
+		}
+
+		function tableMultiply(n) {
+			var multiply = 0;
+			var showTxt = '';
+			for (var i = 1; i <= n; i++) {
+				for (var j = 1; j <= 12; j++) {
+					console.log(i + ' x ' + j + ' = ' + i * j);
+				}
+				console.log('#############');
+			}
+		}
 
 
 	</script>

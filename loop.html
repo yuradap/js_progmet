@@ -23,13 +23,18 @@
 
 		function fac(n) {
 			var fac = 1;
-			var showTxt = n + '! = ';
+			//var showTxt = n + '! = ';
+			var showTxt = '';
+			//console.log(showTxt);
 			for (var i = 1; i <= n; i++) {
 				fac = fac * i;
+				//showTxt = showTxt + n + '! = ' + i + 'x'
 				showTxt = showTxt + i + 'x';
-				
+				//console.log(showTxt);
 			}
-			console.log(showTxt.substring(0, showTxt.length - 1));
+			showTxt = n + '! = ' + showTxt;
+			showTxt = showTxt.substring(0, showTxt.length - 1);
+			console.log(showTxt);
 			return fac;
 		}
 
@@ -99,6 +104,51 @@
 			}
 			return true;
 		}
+
+		function fibonacci(n) {
+			var n3;
+			var n2;
+			var n1;
+
+			n1 = 1;
+			n2 = 1;
+			n3 = n2 + n1;
+			var showTxt = '1, 1, 2, ';
+			for (var i = 4; i <= n;i++) {
+				n1 = n2;
+				n2 = n3;
+				n3 = n2 + n1;
+				showTxt = showTxt + n3 + ', ';
+			}
+			return showTxt;
+		}
+
+		function fibonacciArray(no){
+			var n = [0,1,1];
+
+		}
+
+		function getRandomIntInclusive(min, max) {
+		 	return Math.floor(Math.random() * (max - min + 1)) + min;
+		}
+
+		function lottory() {
+			var count = 0;
+			var lotto;
+			for (var i = 1; i <= 100; i++) {
+				n = getRandomIntInclusive(10,99)
+				if (n == 19){
+					console.log('ถูกหวย เลขที่ออก ' + n);
+				}
+				else {
+					console.log('ถูกกิน เลขที่ออก ' + n);
+				}
+			}
+			count = count + 1;
+			lotto = count + '.' + getRandomIntInclusive(10,99);
+			console.log(lotto);
+		}
+
 		
 	</script>
 </head>
