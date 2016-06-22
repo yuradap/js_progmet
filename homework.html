@@ -406,6 +406,58 @@
 			}
 		}
 
+		function otStaff() {
+			var staffs = ['กุ๊บกิ๊บ', 'อี๊ดอ๊าด', 'บุ๋มบิ๋ม', 'อ้อมแอ้ม', 'อ้อนแอ้น', 'ปุ้มปุ้ย'];
+			var staffsOtHours = [13, 5, 9, 6, 8, 6];
+			var staffsRoll = [3, 3, 4, 5, 5, 4];
+			var roles = ['', 'เจ้าหน้าที่', 'รองแผนก', 'แผนก', 'รองฝ่าย', 'ฝ่าย'];
+			var otRateByRole = [0, 100, 200, 300, 500, 1000];
+			var calOT;
+			var showTxt;
+			for (var i = 0; i <= staffs.length-1; i++) {
+				calOT = staffsOtHours[i] * otRateByRole[staffsRoll[i]];
+				showTxt = staffs[i];
+				showTxt += ' ตำแหน่ง ' + roles[staffsRoll[i]];
+				showTxt += ' ทำ OT = ' + staffsOtHours[i] + ' ชม.';
+				showTxt += ' คิดเป็นเงิน ' + calOT + ' บาท';
+				console.log(showTxt);
+			}
+		}
+
+		function stockUpdate(reciept,unit) {
+			var items = [
+				'มันหวานญี่ปุ่น', 
+				'อุด้ง', 
+				'ยาสีฟัน', 
+				'ชุดสาวใช้', 
+				'ผ้าอนามัย', 
+				'อกไก่รมควัน', 
+				'แปรงสีฟัน', 
+				'น้ำส้ม', 
+				'ป๊อบคอร์น', 
+				'กระดาษเช็ดหน้า', 
+			];
+			var itemsCount = [
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10,
+			];
+			var updateStock;
+			for (var i = 0; i <= reciept.length-1; i++) {
+				console.log(' ซื้อ ' + items[reciept[i]]);
+				console.log(' ซื้อ ' + items[reciept[i]] + ' ' + unit[i] + ' ชิ้น');
+				updateStock = itemsCount[i] - unit[i];
+					console.log(items[reciept[i]] + ' เหลือ ' + updateStock + ' ชิ้น ');
+			}
+		}
+
 
 	</script>
 </head>
