@@ -149,10 +149,30 @@
 			console.log(lotto);
 		}
 
+		function fn(a) {
+			// var a = [10,20,30,40,50,60,70,80,90,100,110,120,130,140]; // ราคาของแต่ละอย่าง ทั้งหมด 8 อย่าง
+			// var a = [10,20,30,40];
+			// ถ้าเกิดต้องปรับราคาขึ้นรายการละ 10% จะทำอย่างไร 
+			// var a = [11,22,33,44,55,66,77,88];
+
+			// console.log(a);
+			var oldPrice;
+			for (var i = 0; i < a.length; i++) {
+				oldPrice = a[i];
+				a[i] = a[i] * 1.07;
+				console.log('ราคาสินค้า#' + (i+1) + ' เดิม ' + oldPrice + ' บาท ขอปรับเป็น '  + a[i] +  ' บาท');
+				
+			}
+
+			// console.log(a);
+
+
+		}
+
 		
 	</script>
 </head>
 <body>
-	<h1>Loop</h1>
+	<h1>Loop1</h1>
 </body>
 </html>
