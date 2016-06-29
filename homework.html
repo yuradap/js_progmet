@@ -458,6 +458,112 @@
 			}
 		}
 
+		function billReceipt(buy,unit) {
+			var items = [
+				'มันหวานญี่ปุ่น', 
+				'อุด้ง', 
+				'ยาสีฟัน', 
+				'ชุดสาวใช้', 
+				'ผ้าอนามัย', 
+				'อกไก่รมควัน', 
+				'แปรงสีฟัน', 
+				'น้ำส้ม', 
+				'ป๊อบคอร์น', 
+				'กระดาษเช็ดหน้า', 
+			];
+			var price = [
+				79, 
+				39, 
+				99, 
+				299, 
+				69, 
+				40, 
+				70, 
+				30, 
+				50, 
+				20, 
+			];
+			var totalPrice;
+			var billPrice = 0;
+			for (var i = 0; i <= buy.length-1; i++) {
+				totalPrice = price[buy[i]] * unit[i];
+				billPrice = billPrice + totalPrice;
+				console.log(items[buy[i]] + ' ' + unit[i] + ' ชิ้น ' + ' ราคา ' + totalPrice + ' บาท ' );
+			}
+			console.log('ราคารวม ' + billPrice + ' ' + 'บาท');
+		}
+	
+
+		function updateBill(buy,unit) {
+			var items = [
+				'มันหวานญี่ปุ่น', 
+				'อุด้ง', 
+				'ยาสีฟัน', 
+				'ชุดสาวใช้', 
+				'ผ้าอนามัย', 
+				'อกไก่รมควัน', 
+				'แปรงสีฟัน', 
+				'น้ำส้ม', 
+				'ป๊อบคอร์น', 
+				'กระดาษเช็ดหน้า', 
+				'เหล้า', 
+				'บุหรี่', 
+				'บัตรเติมเงิน', 
+			];
+			var itemsPrice = [
+				70, 
+				30, 
+				100, 
+				300, 
+				60, 
+				40, 
+				70, 
+				30, 
+				50, 
+				20, 
+				200, 
+				60, 
+				300, 
+			];
+			var itemsAmount = [
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10, 
+				10,
+				10, 
+				10, 
+				10, 
+			];
+			var total;
+			var billingPrice = 0;
+			var r;
+			var specialPrefer;
+			var excludePromotion = 0;
+			for (var i = 0; i <= buy.length-1; i++) {
+				total = itemsPrice[buy[i]] * unit[i];
+				billingPrice = billingPrice + total;
+
+				if (buy[i] >= 10)
+					excludePromotion = excludePromotion + total;
+				
+				if (unit[i] == 1)
+					console.log(items[buy[i]] + ' ' + total + ' บาท ');
+				else
+					console.log(items[buy[i]] + ' x' + unit[i] + ' ' + total + ' บาท ');
+			}
+			console.log('Total ' + billingPrice);
+			var r = (billingPrice - excludePromotion) % 50;
+			specialPrefer = ((billingPrice - excludePromotion) - r) / 50;
+			if (specialPrefer > 0)
+				console.log('คุณได้รับ ' + specialPrefer + ' ' + 'สิทธิ์แลกซื้อ');
+		}
+	
 
 	</script>
 </head>
